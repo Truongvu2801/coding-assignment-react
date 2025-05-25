@@ -1,0 +1,148 @@
+// Ticket Detail styles
+
+// Variables
+$primary-color: #2563eb;
+$border-color: #e2e8f0;
+$background-color: #ffffff;
+$shadow-color: #f1f5f9;
+$font-family: system-ui, -apple-system, sans-serif;
+
+.detailWrap {
+  padding: 2rem;
+  background: $background-color;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: $font-family;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  .back-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+.ticket-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+
+  &--completed {
+    background-color: #e6fffa;
+    color: #10b981;
+  }
+
+  &--incompleted {
+    background-color: #fef2f2;
+    color: #ef4444;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid $border-color;
+    border-radius: 0.375rem;
+    background-color: white;
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+    }
+
+    &:disabled {
+      background-color: #edf2f7;
+      cursor: not-allowed;
+      color: #a0aec0;
+    }
+  }
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.error {
+  color: #dc2626;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #fca5a5;
+  border-radius: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid $border-color;
+  border-radius: 0.375rem;
+  background-color: white;
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: all 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+  }
+
+  &:disabled {
+    background-color: #edf2f7;
+    cursor: not-allowed;
+    color: #a0aec0;
+  }
+}

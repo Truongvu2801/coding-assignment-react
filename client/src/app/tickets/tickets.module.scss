@@ -1,0 +1,54 @@
+$primary-color: #2563eb;
+$border-color: #e2e8f0;
+$background-color: #ffffff;
+$shadow-color: #f1f5f9;
+
+.listWrap {
+  background: $background-color;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.ticketList {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}
+.add-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+
+  textarea {
+    resize: vertical;
+  }
+  button {
+    align-self: flex-end;
+  }
+  &:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+}

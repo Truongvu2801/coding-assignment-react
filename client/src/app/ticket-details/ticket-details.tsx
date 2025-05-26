@@ -23,16 +23,6 @@ const TicketDetail = () => {
   } = useTicketDetail(id!)
   const { users, isLoading: loadingUsers } = useUsers()
 
-  useEffect(() => {
-    const navigateBack = () => {
-      navigate('/', { replace: true })
-    }
-
-    return () => {
-      navigateBack()
-    }
-  }, [navigate])
-
   if (error)
     return <div className={styles['error']}>Error: {error.message}</div>
   if (!ticket) return null
